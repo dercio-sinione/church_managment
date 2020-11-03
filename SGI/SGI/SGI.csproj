@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BAD13C73-2B27-49A5-B1FE-40A7FA116887}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SGI</RootNamespace>
+    <AssemblyName>SGI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.5.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\csForms.cs" />
+    <Compile Include="Classes\csFoto.cs" />
+    <Compile Include="Classes\csRestricoes.cs" />
+    <Compile Include="DataSet_Igreja.cs">
+      <DependentUpon>DataSet_Igreja.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet_Igreja.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Igreja.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Caixa\fn_imprimir_saidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Caixa\fn_imprimir_saidas.Designer.cs">
+      <DependentUpon>fn_imprimir_saidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Caixa\fn_imprimir_vw_entradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Caixa\fn_imprimir_vw_entradas.Designer.cs">
+      <DependentUpon>fn_imprimir_vw_entradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Caixa\fn_rp_saidas_enttradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Caixa\fn_rp_saidas_enttradas.Designer.cs">
+      <DependentUpon>fn_rp_saidas_enttradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Caixa\fnCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Caixa\fnCaixa.Designer.cs">
+      <DependentUpon>fnCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Caixa\fn_imprimir_Caixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Caixa\fn_imprimir_Caixa.Designer.cs">
+      <DependentUpon>fn_imprimir_Caixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Caixa\fn_addSaidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Caixa\fn_addSaidas.Designer.cs">
+      <DependentUpon>fn_addSaidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Caixa\fn_saida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Caixa\fn_saida.Designer.cs">
+      <DependentUpon>fn_saida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Actividades\fn_actividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Actividades\fn_actividades.Designer.cs">
+      <DependentUpon>fn_actividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Actividades\fn_addActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Actividades\fn_addActividades.Designer.cs">
+      <DependentUpon>fn_addActividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Caixa\fn_entradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Caixa\fn_entradas.Designer.cs">
+      <DependentUpon>fn_entradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_addCargo_Membro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_addCargo_Membro.Designer.cs">
+      <DependentUpon>fn_addCargo_Membro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_batizados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_batizados.Designer.cs">
+      <DependentUpon>fn_batizados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_Cargos_Membro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_Cargos_Membro.Designer.cs">
+      <DependentUpon>fn_Cargos_Membro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_Criar_conta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_Criar_conta.Designer.cs">
+      <DependentUpon>fn_Criar_conta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Geral\fn_splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Geral\fn_splash.Designer.cs">
+      <DependentUpon>fn_splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_Users.Designer.cs">
+      <DependentUpon>fn_Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Cargos\fn_addcargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Cargos\fn_addcargos.Designer.cs">
+      <DependentUpon>fn_addcargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Actividades\fn_addCulto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Actividades\fn_addCulto.Designer.cs">
+      <DependentUpon>fn_addCulto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_addMembro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_addMembro.Designer.cs">
+      <DependentUpon>fn_addMembro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Actividades\fn_addTipo_actividade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Actividades\fn_addTipo_actividade.Designer.cs">
+      <DependentUpon>fn_addTipo_actividade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Cargos\fn_cargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Cargos\fn_cargos.Designer.cs">
+      <DependentUpon>fn_cargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Actividades\fn_Culto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Actividades\fn_Culto.Designer.cs">
+      <DependentUpon>fn_Culto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Actividades\fn_dados_culto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Actividades\fn_dados_culto.Designer.cs">
+      <DependentUpon>fn_dados_culto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_info_membross.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_info_membross.Designer.cs">
+      <DependentUpon>fn_info_membross.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Geral\fn_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Geral\fn_login.Designer.cs">
+      <DependentUpon>fn_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_membros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Membros\fn_membros.Designer.cs">
+      <DependentUpon>fn_membros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Geral\fn_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Geral\fn_menu.Designer.cs">
+      <DependentUpon>fn_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Geral\fn_Opacity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Geral\fn_Opacity.Designer.cs">
+      <DependentUpon>fn_Opacity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Actividades\fn_tipo_actos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Actividades\fn_tipo_actos.Designer.cs">
+      <DependentUpon>fn_tipo_actos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="userGrafico_Entradas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userGrafico_Entradas.Designer.cs">
+      <DependentUpon>userGrafico_Entradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user_estatistica_membros.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user_estatistica_membros.Designer.cs">
+      <DependentUpon>user_estatistica_membros.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="formularios\Caixa\fn_imprimir_saidas.resx">
+      <DependentUpon>fn_imprimir_saidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Caixa\fn_imprimir_vw_entradas.resx">
+      <DependentUpon>fn_imprimir_vw_entradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Caixa\fn_rp_saidas_enttradas.resx">
+      <DependentUpon>fn_rp_saidas_enttradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Caixa\fnCaixa.resx">
+      <DependentUpon>fnCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Caixa\fn_imprimir_Caixa.resx">
+      <DependentUpon>fn_imprimir_Caixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Caixa\fn_addSaidas.resx">
+      <DependentUpon>fn_addSaidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Caixa\fn_saida.resx">
+      <DependentUpon>fn_saida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Actividades\fn_actividades.resx">
+      <DependentUpon>fn_actividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Actividades\fn_addActividades.resx">
+      <DependentUpon>fn_addActividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Caixa\fn_entradas.resx">
+      <DependentUpon>fn_entradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Membros\fn_addCargo_Membro.resx">
+      <DependentUpon>fn_addCargo_Membro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Membros\fn_batizados.resx">
+      <DependentUpon>fn_batizados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Membros\fn_Cargos_Membro.resx">
+      <DependentUpon>fn_Cargos_Membro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Membros\fn_Criar_conta.resx">
+      <DependentUpon>fn_Criar_conta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Geral\fn_splash.resx">
+      <DependentUpon>fn_splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Membros\fn_Users.resx">
+      <DependentUpon>fn_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Cargos\fn_addcargos.resx">
+      <DependentUpon>fn_addcargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Actividades\fn_addCulto.resx">
+      <DependentUpon>fn_addCulto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Membros\fn_addMembro.resx">
+      <DependentUpon>fn_addMembro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Actividades\fn_addTipo_actividade.resx">
+      <DependentUpon>fn_addTipo_actividade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Cargos\fn_cargos.resx">
+      <DependentUpon>fn_cargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Actividades\fn_Culto.resx">
+      <DependentUpon>fn_Culto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Actividades\fn_dados_culto.resx">
+      <DependentUpon>fn_dados_culto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Membros\fn_info_membross.resx">
+      <DependentUpon>fn_info_membross.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Geral\fn_login.resx">
+      <DependentUpon>fn_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Membros\fn_membros.resx">
+      <DependentUpon>fn_membros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Geral\fn_menu.resx">
+      <DependentUpon>fn_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Geral\fn_Opacity.resx">
+      <DependentUpon>fn_Opacity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Actividades\fn_tipo_actos.resx">
+      <DependentUpon>fn_tipo_actos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rp_enradas_mes.rdlc" />
+    <EmbeddedResource Include="rp_entradas.rdlc" />
+    <EmbeddedResource Include="rp_saidas.rdlc" />
+    <EmbeddedResource Include="rp_vw_saidas.rdlc" />
+    <EmbeddedResource Include="userGrafico_Entradas.resx">
+      <DependentUpon>userGrafico_Entradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_estatistica_membros.resx">
+      <DependentUpon>user_estatistica_membros.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet_Igreja.xsc">
+      <DependentUpon>DataSet_Igreja.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Igreja.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Igreja.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet_Igreja.xss">
+      <DependentUpon>DataSet_Igreja.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{e2623fe9-f75b-431c-890d-3e71b1676cfc}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Refresh_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Refresh_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Settings_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_User_Male_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Combo_Chart_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Add_User_Male_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_User_Groups_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conference_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find User Male_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus Math_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add File_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search Property_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\activitys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wolfram Alpha_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Holy Bible_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money Bag_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paper Money_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sell Property_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add File_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash Can_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_26px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus Math_26px.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
